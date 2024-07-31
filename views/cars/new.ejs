@@ -1,0 +1,26 @@
+<!-- views/cars/new.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+  </head>
+  <body>
+
+    <h1>Add a Car</h1>
+    <form action="/cars" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" />
+
+        <label for="isReadyToDrive">Ready to Drive?</label>
+        <input type="checkbox" name="isReadyToDrive" id="isReadyToDrive" />
+
+        <button type="submit">Add New Car</button>
+    </form>
+    <a href="/cars">Back to Cars</a>
+    <a href="/">Back Home</a>
+  
+  </body>
+</html>

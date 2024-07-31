@@ -1,0 +1,25 @@
+<!-- views/cars/show.ejs-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Show Page</title>
+  </head>
+  <body>  
+        <h1><%= car.name %></h1>
+        <!-- Conditional rendering based on fruit's readiness -->
+        <% if (car.isReadyToDrive) { %>
+          <p>This car is ready to drive!</p>
+        <% } else { %>
+          <p>This car is not ready to drive!</p>
+        <% } %>
+        <form action="/cars/<%=car._id%>?_method=DELETE" method="POST">
+            <button type="submit">Delete <%= car.name %></button> 
+          </form> 
+          <a href="/cars/<%= car._id %>/edit">Edit <%= car.name %></a>
+<a href="/cars">Back to Cars</a>
+        
+  </body>
+</html>
